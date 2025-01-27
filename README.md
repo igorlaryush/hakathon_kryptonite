@@ -11,11 +11,11 @@
 - test.csv
 - train.csv
 - val.csv
-- for_codenrock/
+- data/
 
 ## Описание данных
 
-Данные - реальные и синтетически сгенерированные изображения лиц расположены в папке `for_codenrock`.
+Данные - реальные и синтетически сгенерированные изображения лиц расположены в папке `data`.
 
 ```
 for_codenrock
@@ -75,7 +75,7 @@ pair_id,similarity
 ## Бейзлайн решение
 
 ### Окружение
-Тестирование работы скриптов проводилось в `Python 3.10.12`.
+Версия Python: `Python 3.10.12`.
   
 Создание окружения:
 
@@ -84,7 +84,7 @@ VENV_DIR="../../venvs/hakathon_kryptonite"
 python3 -m virtualenv $VENV_DIR
 source $VENV_DIR/bin/activate
 
-pip install -r frozen_requirements.txt
+pip install -requirements.txt
 ```
 
 
@@ -95,16 +95,18 @@ pip install -r frozen_requirements.txt
 6 GB - train
 
 ### Запуск скриптов
-1. Обучаем модель:
+1. Обучаем модель 
+**Модель обучается локально!**
 
 ```bash
 python train.py
 ```
 
 2. Формируем `submission.csv` с использованием построенной модели:
+**Сабмит формируется локально!**
 
 ```
-python inference.py 
+python make_submission.py 
 ```
 
 
@@ -136,34 +138,3 @@ def compute_eer(y_true, y_score):
 ```bash
 python eer.py --public_test_url ./data/gt.csv --public_prediction_url ./data/sample_submission.csv
 ```
-
-## Вопросы
-
-1. Как нужно обрабатывать неправильные сабмиты при подсчете метрик? [тут](https://docs.google.com/document/d/1x-Ci0wt3RgMA0zicAD4bjHELjIQgWP4DTsJTMFEzSf8/edit?tab=t.0#heading=h.rm11qqxptto) написано, что грамотно, но как грамотно в шаблоне не продемострировано.
-2. Зачем нужна разметка под retrieval в данных, если это совсем не целевая тема?
-3. Файл train.csv и test.csv имеюь одинаковую структуру, но label в test.csv не говорит об уникальности объекта (разные label могут содержать изрображения одного объекта).
-
-
-## Общие требования платформы
-
-
-- Зафиксировать версию python (для создания образа / окружения): Python 3.10.12
-- Зафиксировать (freeze) версии пакетов в requirements.txt: frozen_requirememnts.txt
-- Дополнить README.md информацией 
-  - о метриках
-  - создании окружения
-  - порядке запуска скриптов
-- предоставить ответы (тест) в виде двух файлов (public.csv, private.csv)
-- Предоставить sample_submission.txt
-- предоставить скрипт подсчета метрик
-
-Если CPU:
-- предоставить скрипт подсчета метрик с разбиением submission.csv на public, private (вернуть json с двумя скорами)
-- предоставить тестовые данные участникам
-- предоставить ответы (на тест) в виде двух файлов (public.csv, private.csv)
-
-Если GPU:
-- предоставить тестовые данные платформе
-- baseline проекта (который в gitlab push-ат участники). Содердит следующее:
-  - pipeline docker build
-  - pipeline inference

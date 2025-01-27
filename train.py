@@ -16,8 +16,8 @@ from oml.registry import get_transforms_for_pretrained
 from oml.retrieval import RetrievalResults, AdaptiveThresholding
 from oml.samplers import BalanceSampler
 
-device = "cuda"
-epochs = 10
+device = "cpu"
+epochs = 1
 
 
 def fix_seed(seed: int):
@@ -58,7 +58,7 @@ if __name__ == "__main__":
 
 
     def validation():
-        embeddings = inference(model, val, batch_size=32, num_workers=6, verbose=True)
+        embeddings = inference(model, val, batch_size=32, num_workers=0, verbose=True)
         rr = RetrievalResults.from_embeddings(embeddings, val, n_items=10)
         rr = AdaptiveThresholding(n_std=2).process(rr)
         rr.visualize(query_ids=[2, 1], dataset=val, show=True)
