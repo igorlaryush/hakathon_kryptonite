@@ -138,3 +138,37 @@ def compute_eer(y_true, y_score):
 ```bash
 python eer.py --public_test_url ./data/gt.csv --public_prediction_url ./data/sample_submission.csv
 ```
+
+
+## Пример загрузки submission на платформу
+
+### 1. Клонирование проекта:
+
+```bash
+git clone git@git.codenrock.com:kryptonite-ml-challenge-1347/template_6468.git
+```
+
+### 2. Загрузите данные и поместите в папку data:
+
+Данные для обучения: <будут указаны ссылки на train>
+Данные для теста: <будут указаны ссылки на test>
+
+### 3. Обучите модель
+
+```bash
+python train.py
+```
+
+### 4. Создайте submission.csv
+
+```bash
+python make_submission.py 
+```
+
+### 5. Загрузите решение на площадку
+
+```bash
+git add .
+git commit -m 'submission'
+git push origin master
+```
