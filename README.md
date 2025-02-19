@@ -142,7 +142,7 @@ python eer.py --public_test_url ./data/gt.csv --public_prediction_url ./data/sam
 
 ## Пример загрузки submission на платформу
 
-### 1. Клонирование проекта:
+### 1. Клонируйте проект:
 
 ```bash
 git clone git@git.codenrock.com:kryptonite-ml-challenge-1347/template_6468.git
