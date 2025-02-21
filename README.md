@@ -144,8 +144,8 @@ git clone git@git.codenrock.com:kryptonite-ml-challenge-1347/template_6468.git
 
 ### 2. Загрузите данные и поместите в папку data:
 
-Данные для обучения: <будут указаны ссылки на train>
-Данные для теста: <будут указаны ссылки на test>
+Данные для обучения: [ссылка для скачивания](https://storage.codenrock.com/companies/codenrock-13/contests/kryptonite-ml-challenge/train.zip)
+Данные для теста: [ссылка для скачивания](https://storage.codenrock.com/companies/codenrock-13/contests/kryptonite-ml-challenge/test_public.zip)
 
 ### 3. Обучите модель
 
