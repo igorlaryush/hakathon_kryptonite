@@ -149,8 +149,6 @@ git clone git@git.codenrock.com:kryptonite-ml-challenge-1347/template_6468.git
 - **Данные для обучения**: [Скачать по ссылке](https://storage.codenrock.com/companies/codenrock-13/contests/kryptonite-ml-challenge/train.zip)
 - **Данные для теста**: [Скачать по ссылке](https://storage.codenrock.com/companies/codenrock-13/contests/kryptonite-ml-challenge/test_public.zip)
 
-### Инструкция:
-
 1. Создайте папку `data` в корневой директории проекта.
 2. Загрузите данные по указанным ссылкам.
 3. Поместите загруженные файлы в папку `data`.
