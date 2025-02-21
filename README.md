@@ -142,10 +142,18 @@ def compute_eer(y_true, y_score):
 git clone git@git.codenrock.com:kryptonite-ml-challenge-1347/template_6468.git
 ```
 
-### 2. Загрузите данные и поместите в папку data:
+### 2. Загрузите данные и поместите в папку `data`
 
-Данные для обучения: [ссылка для скачивания](https://storage.codenrock.com/companies/codenrock-13/contests/kryptonite-ml-challenge/train.zip)
-Данные для теста: [ссылка для скачивания](https://storage.codenrock.com/companies/codenrock-13/contests/kryptonite-ml-challenge/test_public.zip)
+Перед началом работы необходимо загрузить данные и разместить их в папке `data`. 
+
+- **Данные для обучения**: [Скачать по ссылке](https://storage.codenrock.com/companies/codenrock-13/contests/kryptonite-ml-challenge/train.zip)
+- **Данные для теста**: [Скачать по ссылке](https://storage.codenrock.com/companies/codenrock-13/contests/kryptonite-ml-challenge/test_public.zip)
+
+### Инструкция:
+
+1. Создайте папку `data` в корневой директории проекта.
+2. Загрузите данные по указанным ссылкам.
+3. Поместите загруженные файлы в папку `data`.
 
 ### 3. Обучите модель
 
