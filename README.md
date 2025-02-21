@@ -133,12 +133,6 @@ def compute_eer(y_true, y_score):
     return eer
 ```
 
-Вычисление метрики на платформе:
-
-```bash
-python eer.py --public_test_url ./data/gt.csv --public_prediction_url ./data/sample_submission.csv
-```
-
 
 ## Пример загрузки submission на платформу
 
