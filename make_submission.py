@@ -17,7 +17,7 @@ def create_sample_sub(pair_ids: List[str], sim_scores: List[float]):
 
 if __name__ == "__main__":
     device = "cpu"
-    test_path = 'test.csv'
+    test_path = "test.csv"
 
     model = ViTExtractor.from_pretrained("vits16_dino")
     state_dict = torch.load("model.pth", map_location="cpu")

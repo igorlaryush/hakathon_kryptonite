@@ -43,7 +43,6 @@ if __name__ == "__main__":
     criterion = TripletLossWithMiner(0.1, AllTripletsMiner(), need_logs=True)
     sampler = BalanceSampler(train.get_labels(), n_labels=16, n_instances=4)
 
-
     def training():
         for epoch in range(epochs):
             pbar = tqdm(DataLoader(train, batch_sampler=sampler))
@@ -55,7 +54,6 @@ if __name__ == "__main__":
                 optimizer.step()
                 optimizer.zero_grad()
                 pbar.set_postfix(criterion.last_logs)
-
 
     def validation():
         embeddings = inference(model, val, batch_size=32, num_workers=0, verbose=True)
