@@ -42,4 +42,4 @@ if __name__ == "__main__":
     pair_ids = pair_ids[::2]
 
     sub_df = create_sample_sub(pair_ids, sim_scores)
-    sub_df.to_csv("submission.csv", index=False)
+    sub_df.to_csv("data/submission.csv", index=False)
