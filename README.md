@@ -7,11 +7,15 @@
 
 ## Данные
 
-Поместить артефакты в папку проекта, а именно:
-- test.csv
-- train.csv
-- val.csv
-- data/
+
+Перед началом работы необходимо загрузить данные и разместить их в папке `data`. 
+
+- **Данные для обучения**: [Скачать по ссылке](https://storage.codenrock.com/companies/codenrock-13/contests/kryptonite-ml-challenge/train.zip)
+- **Данные для теста**: [Скачать по ссылке](https://storage.codenrock.com/companies/codenrock-13/contests/kryptonite-ml-challenge/test_public.zip)
+
+1. Создайте папку `data` в корневой директории проекта.
+2. Загрузите данные по указанным ссылкам.
+3. Поместите загруженные файлы в папку `data`.
 
 ## Описание данных
 
@@ -131,44 +135,4 @@ def compute_eer(y_true, y_score):
     eer_index = np.nanargmin(np.absolute((fnr - fpr)))
     eer = fnr[eer_index]
     return eer
-```
-
-
-## Пример загрузки submission на платформу
-
-### 1. Клонируйте проект:
-
-```bash
-git clone git@git.codenrock.com:kryptonite-ml-challenge-1347/template_6468.git
-```
-
-### 2. Загрузите данные и поместите в папку `data`
-
-Перед началом работы необходимо загрузить данные и разместить их в папке `data`. 
-
-- **Данные для обучения**: [Скачать по ссылке](https://storage.codenrock.com/companies/codenrock-13/contests/kryptonite-ml-challenge/train.zip)
-- **Данные для теста**: [Скачать по ссылке](https://storage.codenrock.com/companies/codenrock-13/contests/kryptonite-ml-challenge/test_public.zip)
-
-1. Создайте папку `data` в корневой директории проекта.
-2. Загрузите данные по указанным ссылкам.
-3. Поместите загруженные файлы в папку `data`.
-
-### 3. Обучите модель
-
-```bash
-python train.py
-```
-
-### 4. Создайте submission.csv
-
-```bash
-python make_submission.py 
-```
-
-### 5. Загрузите решение на площадку
-
-```bash
-git add .
-git commit -m 'submission'
-git push origin master
 ```
