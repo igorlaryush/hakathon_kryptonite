@@ -1,1 +1,6 @@
 data/
+*.pth
+
+mlruns/
+
+*.png

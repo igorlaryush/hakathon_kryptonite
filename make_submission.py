@@ -20,11 +20,11 @@ if __name__ == "__main__":
     if not os.path.exists("data"):
         os.makedirs("data")
 
-    device = "cpu"
+    device = "cuda"
     test_path = "test.csv"
 
     model = ViTExtractor.from_pretrained("vits16_dino")
-    state_dict = torch.load("model.pth", map_location="cpu")
+    state_dict = torch.load("model.pth", map_location="cuda")
     model.load_state_dict(state_dict)
     model = model.to(device).eval()
 
