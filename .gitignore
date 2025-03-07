@@ -4,3 +4,6 @@ data/
 mlruns/
 
 *.png
+
+experiment_runs.txt
+logs/
